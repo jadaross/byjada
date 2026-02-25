@@ -10,7 +10,7 @@ export const timeline: TimelineItem[] = [
   {
     year: "2025 — present",
     emoji: "🐍",
-    title: "Senior AI Systems Engineer, Snyk",
+    title: "AI Systems Engineer, Snyk",
     description:
       "Building production LLM systems and agentic workflows (LangGraph) to operationalise enterprise knowledge. Architected scalable ingestion and retrieval infrastructure — Slack pipelines, a Master Ingester, and a REST API for semantic search across internal data sources. Represent Snyk at international engineering conferences.",
     color: "bg-orange",

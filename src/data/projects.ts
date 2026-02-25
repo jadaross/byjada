@@ -47,13 +47,6 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    name: "COVID-19 Reinfection Forecasting",
-    description:
-      "National forecasting model using Bayesian statistical methods, integrating health datasets across Australian jurisdictions to support Primary Care decisions for 100+ government stakeholders.",
-    tags: ["Bayesian Stats", "XGBoost", "Python", "Public Health"],
-    featured: false,
-  },
-  {
     name: "byjada",
     description:
       "This site. Next.js 16, TypeScript, Tailwind CSS v4. Cursor sparkle, typewriter animations, and autumn vibes included.",
