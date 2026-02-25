@@ -1,65 +1,109 @@
-import Image from "next/image";
+import Link from "next/link";
+import Typewriter from "@/components/Typewriter";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      {/* ── Hero ── */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 pt-16">
+        {/* Decorative floating leaf shapes */}
+        <div className="leaf-1 absolute top-24 left-8 md:left-16 w-20 h-32 bg-orange/20 rounded-[60%_40%_70%_30%/40%_60%_30%_70%] pointer-events-none" />
+        <div className="leaf-2 absolute top-36 right-10 md:right-24 w-14 h-22 bg-pink/25 rounded-[40%_60%_30%_70%/60%_40%_70%_30%] pointer-events-none" />
+        <div className="leaf-3 absolute bottom-32 left-16 md:left-32 w-16 h-28 bg-amber/20 rounded-[50%_50%_60%_40%/40%_60%_40%_60%] pointer-events-none" />
+        <div className="leaf-4 absolute bottom-44 right-8 md:right-20 w-12 h-20 bg-rust/20 rounded-[60%_40%_50%_50%/30%_70%_40%_60%] pointer-events-none" />
+        <div className="leaf-5 absolute top-1/2 right-4 w-8 h-14 bg-mauve/15 rounded-[45%_55%_60%_40%/50%_50%_60%_40%] pointer-events-none hidden md:block" />
+
+        {/* Hero content */}
+        <div className="relative z-10 max-w-3xl text-center">
+          <p className="text-dark/50 text-base md:text-lg mb-4 tracking-wide">
+            hi there, welcome to my little corner 👋
           </p>
+          <h1 className="text-7xl md:text-[10rem] font-bold text-dark mb-6 leading-none tracking-tight">
+            jada<span className="text-pink">.</span>
+          </h1>
+          <p className="text-xl md:text-3xl text-dark/75 mb-10 min-h-[2em]">
+            i&apos;m a <Typewriter />
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link
+              href="#sections"
+              className="px-8 py-3 bg-dark text-cream rounded-full font-medium hover:bg-dark/85 transition-all hover:scale-105 active:scale-95"
+            >
+              explore ↓
+            </Link>
+            <a
+              href="https://github.com/YOUR_USERNAME"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 border-2 border-dark text-dark rounded-full font-medium hover:bg-dark hover:text-cream transition-all hover:scale-105 active:scale-95"
+            >
+              github ↗
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Scroll hint */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-dark/30 text-xs">
+          <span>scroll</span>
+          <div className="w-px h-8 bg-dark/20" />
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ── Section cards ── */}
+      <section id="sections" className="py-24 px-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Projects */}
+          <Link
+            href="/projects"
+            className="group relative overflow-hidden rounded-3xl p-8 bg-orange text-cream hover:scale-[1.02] transition-all duration-300 min-h-[280px] flex flex-col justify-between shadow-lg hover:shadow-xl"
+          >
+            <div>
+              <span className="text-5xl mb-6 block">⚙️</span>
+              <h2 className="text-3xl font-bold mb-2">projects</h2>
+              <p className="text-cream/75 leading-relaxed">
+                things i&apos;ve built and tinkered with
+              </p>
+            </div>
+            <span className="text-3xl group-hover:translate-x-2 transition-transform duration-300">
+              →
+            </span>
+          </Link>
+
+          {/* Timeline */}
+          <Link
+            href="/timeline"
+            className="group relative overflow-hidden rounded-3xl p-8 bg-mauve text-cream hover:scale-[1.02] transition-all duration-300 min-h-[280px] flex flex-col justify-between shadow-lg hover:shadow-xl"
+          >
+            <div>
+              <span className="text-5xl mb-6 block">🗺️</span>
+              <h2 className="text-3xl font-bold mb-2">timeline</h2>
+              <p className="text-cream/75 leading-relaxed">
+                chapters of my story so far
+              </p>
+            </div>
+            <span className="text-3xl group-hover:translate-x-2 transition-transform duration-300">
+              →
+            </span>
+          </Link>
+
+          {/* Blog */}
+          <Link
+            href="/blog"
+            className="group relative overflow-hidden rounded-3xl p-8 bg-pink text-cream hover:scale-[1.02] transition-all duration-300 min-h-[280px] flex flex-col justify-between shadow-lg hover:shadow-xl"
+          >
+            <div>
+              <span className="text-5xl mb-6 block">✍️</span>
+              <h2 className="text-3xl font-bold mb-2">blog</h2>
+              <p className="text-cream/75 leading-relaxed">
+                thoughts, learnings, random musings
+              </p>
+            </div>
+            <span className="text-3xl group-hover:translate-x-2 transition-transform duration-300">
+              →
+            </span>
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
