@@ -12,7 +12,7 @@ export default function Footer() {
         </p>
         <div className="flex gap-6">
           <a
-            href="https://github.com/YOUR_USERNAME"
+            href="https://github.com/jadaross"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-dark transition-colors"

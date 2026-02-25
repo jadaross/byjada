@@ -32,7 +32,7 @@ export default function Home() {
               explore ↓
             </Link>
             <a
-              href="https://github.com/YOUR_USERNAME"
+              href="https://github.com/jadaross"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border-2 border-dark text-dark rounded-full font-medium hover:bg-dark hover:text-cream transition-all hover:scale-105 active:scale-95"
@@ -49,8 +49,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── About strip ── */}
+      <section className="px-6 pb-4 max-w-3xl mx-auto text-center">
+        <p className="text-lg md:text-xl text-dark/65 leading-relaxed">
+          Senior AI Systems Engineer at{" "}
+          <span className="text-dark font-medium">Snyk</span>, based in London.
+          I build LLM pipelines, autonomous agents, and AI-powered analytics systems —
+          and before that spent 3 years at{" "}
+          <span className="text-dark font-medium">Quantium</span> doing data science
+          across retail, health, and government (including the first generative AI
+          deployment for NHS patient experience analysis).
+        </p>
+      </section>
+
       {/* ── Section cards ── */}
-      <section id="sections" className="py-24 px-6 max-w-5xl mx-auto">
+      <section id="sections" className="py-16 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6">
           {/* Projects */}
           <Link

@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 
-// TODO: Customize these to reflect your actual roles / personality
 const roles = [
-  "software engineer",
-  "side-project enthusiast",
+  "senior AI systems engineer",
+  "LLM pipeline builder",
+  "data scientist",
+  "stat nerd turned AI engineer",
+  "deep reinforcement learning enjoyer",
   "forever learning",
-  "builder of things",
-  "coffee-fueled developer",
 ];
 
 export default function Typewriter() {
